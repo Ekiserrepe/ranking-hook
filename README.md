@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8f841ec2-2b72-4cd9-ae9a-233000d0dd0a">
+  <img src="https://github.com/user-attachments/assets/13931549-9b00-4540-b5df-173f58bd104b">
 </p>
 
 # Ranking Hook (An example for Xahau based games) 
