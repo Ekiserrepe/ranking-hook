@@ -130,7 +130,7 @@ For SCORE value we are using 0200000000000000 as score value that is the transla
         "HookParameterValue": "1E2D42546C8A5270D4E182FAE3D12186F2A32A7E"
       }
     }
-  ],
+    ],
       ...networkInfo.txValues,
     };
 
@@ -157,7 +157,7 @@ In this example we are using 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E as address
         "HookParameterValue": "1E2D42546C8A5270D4E182FAE3D12186F2A32A7E"
       }
     }
-  ],
+    ],
       ...networkInfo.txValues,
     };
 
@@ -183,7 +183,7 @@ In this example we are using 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E as address
         "HookParameterValue": "1E2D42546C8A5270D4E182FAE3D12186F2A32A7E"
       }
     }
-  ],
+    ],
       ...networkInfo.txValues,
     };
 
@@ -209,7 +209,7 @@ In this example we are using 01 as value. RESET param string is HEX translated: 
         "HookParameterValue": "01"
       }
     }
-  ],
+    ],
       ...networkInfo.txValues,
     };
 
@@ -231,11 +231,11 @@ In this example we are using 01 as value. CLEAN param string is HEX translated: 
       HookParameters: [
         {
       "HookParameter": {
-        "HookParameterName": "5245534554",
+        "HookParameterName": "434C45414E",
         "HookParameterValue": "01"
       }
     }
-  ],
+    ],
       ...networkInfo.txValues,
     };
 
