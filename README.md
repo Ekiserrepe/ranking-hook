@@ -32,6 +32,38 @@ If for some fund management error or necessity, we can reset the VAULT counter. 
 
 If you want to reset the current ranking. You can use an Invoke transaction with the Hook Param “CLEAN” and the value 01. This will reset the rankings with value score 1 and a default address. This can be useful if you have detected abuses in your game or want to restart the challenge of reaching the rankings.
 
+## How the data is stored on the Xahau blockchain
+
+Xahau allows us to save information so that we can work with hooks and data we need. For the Ranking hook we work with 3 namespaces or tables. These tables are generated in each account that installs the hook. The two most important tables are the ADDRESS and SCORE namespaces. The namespaces in Xahau store a key and a value in each record. The key is normally used to identify the id we want to work with and the value stores the information of that id. In this case, for a ranking what we want to store is a top 5 of addresses and scores that will represent our top scoring players. As in a namespace I only store one key and one value per row, I must create two namespaces, one for addresses and one for scores.
+
+The ADDRESS namespace or "table" would look like this:
+Namespace: 19DBF7B7FC66ECCB9DDBE53345B6D28F9523488B2CE83BDED0F04B1F0D7AEFDE
+| key | value|
+|-----|------|
+|0000000000000000000000000000000000000000000000000000000000000001 | 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E |
+|0000000000000000000000000000000000000000000000000000000000000002 | 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E |
+|0000000000000000000000000000000000000000000000000000000000000003 | 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E |
+|0000000000000000000000000000000000000000000000000000000000000004 | 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E |
+|0000000000000000000000000000000000000000000000000000000000000005 | 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E |
+
+The value 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E represents the HEX translation of an XRPL address rskZVQvBEXAwsBTFsgEZMBfwnhC7oydSnp 
+
+You can check DinoXAHur SCORE namespace on live: https://xahau.xrplwin.com/account/r4Yau7DTPk2TizjitD6p2W2hkGhorUZzn4/namespaces/7946EE7FF049DB3527BAE5E7BA6823B61570D5EA82FDEA39E227D9E223023921
+
+The SCORE namespace or "table" would look like this:
+Namespace: 48967082CCF2935B9CB27CE3335494191B6A541AF65471742285339BAD94394A
+| key | value|
+|-----|------|
+|0000000000000000000000000000000000000000000000000000000000000001 | 2C00000000000000 |
+|0000000000000000000000000000000000000000000000000000000000000002 | 0100000000000000 |
+|0000000000000000000000000000000000000000000000000000000000000003 | 0100000000000000 |
+|0000000000000000000000000000000000000000000000000000000000000004 | 0100000000000000 |
+|0000000000000000000000000000000000000000000000000000000000000005 | 0100000000000000 |
+
+The value 2C00000000000000 represents the HEX translation of 44 xflDecimal (uint64). 
+
+You can check DinoXAHur SCORE namespace on live: https://xahau.xrplwin.com/account/r4Yau7DTPk2TizjitD6p2W2hkGhorUZzn4/namespaces/48967082CCF2935B9CB27CE3335494191B6A541AF65471742285339BAD94394A
+
 ## Installation & Usage
 
 Once the hook is installed, the following triggers are expected for the hook.
