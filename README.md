@@ -104,11 +104,11 @@ HookOn is activated to trigger for Invoke and Payment transactions. You can veri
       ...networkInfo.txValues,
     };
 
-## How to install the Highest Number Hook on JSHooks Testnet?
+## How to install the Ranking Hook on JSHooks Testnet?
 
 Work in progress...
 
-## How to uninstall the Highest Number Hook on Mainnet/Testnet?
+## How to uninstall the Ranking Hook on Mainnet/Testnet?
 
     const prepared = {
       "TransactionType": "SetHook",
@@ -167,31 +167,6 @@ For SCORE value we are using 0200000000000000 as score value that is the transla
     };
 
 
-## Using AVOID Hook Param
-
-We create a Invoke transaction with our Hook Account as "Account" and NO Destination Account. 
-
-Hook Parameters and values will be:
-- AVOID
-- Xahau Address in HEX
-
-In this example we are using 1E2D42546C8A5270D4E182FAE3D12186F2A32A7E as address value that is the translated version of the address rskZVQvBEXAwsBTFsgEZMBfwnhC7oydSnp. You can visit https://transia-rnd.github.io/xrpl-hex-visualizer/ , Insert the account and click on From Hex button, you will see that the xrpAddress will be the same as we added. AVOID param string is HEX translated: 41564F4944. (For https://builder.xahau.network/ IDE you don't need to translate Parameter Name)
-
-
-    const prepared = {
-      TransactionType: "Invoke",
-      Account: your_account_address,
-      Flags: 0,
-      HookParameters: [
-        {
-      "HookParameter": {
-        "HookParameterName": "41564F4944",
-        "HookParameterValue": "1E2D42546C8A5270D4E182FAE3D12186F2A32A7E"
-      }
-    }
-    ],
-      ...networkInfo.txValues,
-    };
 
 ## Using AVOID Hook Param
 
@@ -272,7 +247,7 @@ In this example we are using 01 as value. CLEAN param string is HEX translated: 
     };
 
 
-## How to install the Highest Number Hook on Mainnet?
+## How to install the Ranking Hook on Mainnet?
 
 Same as Testnet but changing the hookhash. The Hookhash is 92323532CC4281485A4B4DB4E27A1AFE81758B29C616C90546011FB9AD445268.
 
